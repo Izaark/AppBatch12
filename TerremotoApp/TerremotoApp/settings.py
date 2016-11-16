@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'Encuesta',
     'direcciones',
     'rest_framework',
+    'Usuario',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -123,3 +124,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = ('static',)
+
+AUTH_USER_MODEL = 'Usuario.Usuario'

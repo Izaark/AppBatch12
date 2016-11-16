@@ -1,7 +1,7 @@
 from django.conf.urls import url,include
 from django.contrib.auth.views import login,logout_then_login
 from django.contrib import admin
-import urls_api
+from TerremotoApp import urls_api
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
