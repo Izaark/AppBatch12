@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from Usuario.models import Usuario
 
 Tipo_CHOICES= (
         ("Texto","Texto"),
@@ -23,6 +24,7 @@ class Cuestionario(models.Model):
 class Respuesta(models.Model):
         
         #Attributs
+        usuario = models.ForeignKey(Usuario)
         respuesta_Bool = models.BooleanField(max_length=20,blank=False,null=False)
         respuesta_Single = models.CharField(max_length=200,blank=True,null=False)
         #Relations
