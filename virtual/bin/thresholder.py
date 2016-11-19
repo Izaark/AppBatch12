@@ -1,4 +1,4 @@
-#!/Users/MacBook/Desktop/app/entorno/bin/python3
+#!/Users/MacBook/Desktop/app/AppBatch12/virtual/bin/python3
 #
 # The Python Imaging Library
 # $Id$

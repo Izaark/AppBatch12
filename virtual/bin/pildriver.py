@@ -1,4 +1,4 @@
-#!/Users/MacBook/Desktop/app/entorno/bin/python3
+#!/Users/MacBook/Desktop/app/AppBatch12/virtual/bin/python3
 """PILdriver, an image-processing calculator using PIL.
 
 An instance of class PILDriver is essentially a software stack machine

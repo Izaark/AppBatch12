@@ -1,4 +1,4 @@
-#!/Users/MacBook/Desktop/app/entorno/bin/python3
+#!/Users/MacBook/Desktop/app/AppBatch12/virtual/bin/python3
 from django.core import management
 
 if __name__ == "__main__":

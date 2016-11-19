@@ -32,7 +32,7 @@ end
 # unset irrelavent variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/MacBook/Desktop/app/entorno"
+set -gx VIRTUAL_ENV "/Users/MacBook/Desktop/app/AppBatch12/virtual"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
@@ -55,8 +55,8 @@ if test -z "$VIRTUAL_ENV_DISABLE_PROMPT"
     # with the original prompt function renamed, we can override with our own.
     function fish_prompt
         # Prompt override?
-        if test -n "$(entorno) "
-            printf "%s%s%s" "$(entorno) " (set_color normal) (_old_fish_prompt)
+        if test -n "$(virtual) "
+            printf "%s%s%s" "$(virtual) " (set_color normal) (_old_fish_prompt)
             return
         end
         # ...Otherwise, prepend env
