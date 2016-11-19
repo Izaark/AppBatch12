@@ -1,7 +1,14 @@
 from rest_framework import serializers
-from .models import Colonia
+from .models import Direccion,Colonia
+from Usuario.serializers import UsuarioSerializer
 
-class ColoniaSerializer(serializers.ModelSerializer):
+class DireccionSerializer(serializers.ModelSerializer):
+	usuario = UsuarioSerializer(many = True, read_only= True)	
+	class Meta:
+		model = Direccion
+		fields = ['id','slug','calle','usuario']
+
+class ColoniaSerializer(serializers.ModelSerializer):	
 	class Meta:
 		model = Colonia
-		fields = ["codigo_postal", "nombre", "municipio", "ciudad","estado","pais"]
+		fields = ['nombre']
