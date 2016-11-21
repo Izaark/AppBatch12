@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'direcciones',
     'rest_framework',
     'Usuario',
+    'clima',
 ]
 
 MIDDLEWARE_CLASSES = [

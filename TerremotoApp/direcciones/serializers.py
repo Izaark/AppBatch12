@@ -8,7 +8,7 @@ class DireccionSerializer(serializers.ModelSerializer):
 		model = Direccion
 		fields = ['id','slug','calle','numero_interior','numero_exterior','direccion_usuario']
 
-class ColoniaSerializer(serializers.ModelSerializer):	
-	class Meta:
-		model = Colonia
-		fields = ['nombre']
+class ColoniaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Colonia
+        fields = ["codigo_postal", "nombre", "municipio", "ciudad","estado","pais"]
