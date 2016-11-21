@@ -21,10 +21,14 @@ class Interes (models.Model):
 
 class Usuario(AbstractUser):
     # user = models.OneToOneField(User, on_delete=models.CASCADE)
-    _direccion = models.ForeignKey(Direccion, verbose_name='direccion', null=True)
-    telefono = models.ManyToManyField(Telefono, verbose_name='telefono', blank=True)
-    circulo_amigos = models.ManyToManyField('self', related_name='amigos_usuario', blank=True)
-    intereses = models.ManyToManyField(Interes, related_name='intereses_usuario', blank=True)
+    _direccion = models.ForeignKey(
+        Direccion, verbose_name='direccion', null=True)
+    telefono = models.ManyToManyField(
+        Telefono, verbose_name='telefono', blank=True)
+    circulo_amigos = models.ManyToManyField(
+        'self', related_name='amigos_usuario', blank=True)
+    intereses = models.ManyToManyField(
+        Interes, related_name='intereses_usuario', blank=True)
 
     def __str__(self):
         if self.first_name:
