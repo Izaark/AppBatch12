@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block header %}
+	<h3>Registros</h3>
+{% endblock header %}
+
+{% block content %}
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<td>#</td>
+			<td>username</td>
+			<td>first_name</td>
+			<td>last_name</td>
+			<td>email</td>
+			<td>direccion</td>
+			<td>telefono</td>
+			<td>Amigos</td>
+			<td>intereses</td>
+		
+		</tr>
+		
+	</thead>
+	<tbody>
+	{% if object_list %}
+	{% for usuario in object_list %}
+	<tr>
+		<td>{{usuario.id}}</td>
+		<td>{{usuario.username}}</td>
+		<td>{{usuario.first_name}}</td>
+		<td>{{usuario.last_name}}</td>
+		<td>{{usuario.email}}</td>
+		<td>{{usuario.direccion.slug}}</td>
+		<td>{{usuario.telefono.numero_telefono}}</td>
+		<td>{{usuario.circulo_amigos.self}}</td>
+		<td>{{usuario.intereses.nombre}}</td>
+	</tr> 
+		
+	{% endfor %}
+		{% else %}
+		<h3>No hay usuarios</h3>
+	{% endif %}
+	
+	</tbody>
+</table>	
+<ul class="pager">
+	<li>
+	{% if page_obj.has_previous %}
+       	 <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+		{% endif %}
+        </li>
+	<li>
+		{% if page_obj.has_next %}
+     	 <a href="?page={{ page_obj.next_page_number }}">Next</a> 
+    	{% endif %}
+	</li>
+</ul>
+	{% endblock content %}

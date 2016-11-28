@@ -9,7 +9,6 @@ class UsuarioViewSet(viewsets.ModelViewSet):
 	serializer_class = UsuarioSerializer
 
 class UsuarioList(generics.ListCreateAPIView):
-	'''Listado de alumni filtrados por name y activos'''
 	queryset = Usuario.objects.all()
 	serializer_class = UsuarioSerializer
 	filter_backends = (filters.SearchFilter, filters.DjangoFilterBackend,)

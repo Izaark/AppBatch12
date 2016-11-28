@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+	<form  method="POST" >
+	{% csrf_token %}
+	<h3>Quieres eliminar el registro de {{object.slug}} ?</h3>
+	<button class="btn btn-danger" type="submit"> sí eliminar</button>
+	<a class="btn btn-default" href="{% url 'direcciones:direccion_listar' %}">Cancelar</a>
+	</form>
+{% endblock content %}

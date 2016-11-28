@@ -9,5 +9,7 @@ urlpatterns = [
 	url(r'^login/',login,{'template_name':'index.html'}, name='login'),
 	url(r'^logout/',logout_then_login, name='logout'),
     url(r'^api/v1/', include(urls_api)),
-    url(r'^clima/', include('clima.urls', namespace='clima'))
+    url(r'^clima/', include('clima.urls', namespace='clima')),
+    url(r'^direcciones/', include("direcciones.urls", namespace='direcciones')),
+    url(r'^usuarios/', include("Usuario.urls", namespace='usuario')),
 ]
