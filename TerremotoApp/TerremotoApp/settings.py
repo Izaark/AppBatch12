@@ -126,5 +126,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = ('static',)
+LOGIN_REDIRECT_URL = reverse_lazy('Usuario:listado_usuarios')
 
 AUTH_USER_MODEL = 'Usuario.Usuario'
+
+
